@@ -24,14 +24,11 @@ function deleteGrid() {
   const divs = document.querySelectorAll('.div');
   for (let div of divs) {
     div.remove();
-    console.log('divs removed');
   }
 }
 
 function addHover() {
   const divs = document.querySelectorAll('.div');
-  console.log(divs);
-
   divs.forEach((div) => {
     div.addEventListener('mouseenter', (e) => {
       div.classList.add('hover');
@@ -40,8 +37,13 @@ function addHover() {
 }
 
 btn.addEventListener('click', (e) => {
+  // DELETE PREVIOUS GRID BEFORE GENERATING NEW ONE
   deleteGrid();
   let input = prompt('Enter grid size');
+  // STOP USER FROM ENTERING A VALUE LARGER THAN 100
+  if (parseInt(input) > 100) {
+    input = 100;
+  }
   generateGrid(input);
   addHover();
 });

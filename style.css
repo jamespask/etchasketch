@@ -1,3 +1,14 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 #container {
   display: flex;
   height: 360px;
@@ -5,8 +16,9 @@
   flex-wrap: wrap;
   padding: 0;
   flex-basis: 360px;
-  background-color: beige;
-  border: 1px solid green;
+  background-color: rgb(195, 195, 180);
+  border: 20px solid rgb(200, 31, 31);
+  border-radius: 8px;
 }
 
 .div {
@@ -19,11 +31,48 @@
 }
 
 .hover {
-  background-color: blue;
+  background-color: black;
 }
 
 .heading {
   text-align: center;
 
   margin-bottom: 20px;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #272a2d;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#button:hover,
+#button:focus {
+  background: #0053ba;
+}
+
+#button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+#button:active {
+  transform: scale(0.99);
 }
