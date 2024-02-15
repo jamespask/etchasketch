@@ -31,7 +31,10 @@ function addHover() {
   const divs = document.querySelectorAll('.div');
   divs.forEach((div) => {
     div.addEventListener('mouseenter', (e) => {
-      div.classList.add('hover');
+      const r = Math.floor(Math.random() * 255) + 1;
+      const g = Math.floor(Math.random() * 255) + 1;
+      const b = Math.floor(Math.random() * 255) + 1;
+      div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
   });
 }
