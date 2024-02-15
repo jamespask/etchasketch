@@ -52,20 +52,21 @@ body {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: #272a2d;
+  background: #44484c;
   color: #ffffff;
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 #button:hover,
 #button:focus {
-  background: #0053ba;
+  background: #000000;
 }
 
 #button:focus {
